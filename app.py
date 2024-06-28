@@ -1,13 +1,15 @@
-import json
+"""GPT generated annotation."""
+
 import os
+import json
+import sqlite3
 import streamlit as st
 import requests
-import sqlite3
 from openai import OpenAI
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
-from langchain.chains.summarize import load_summarize_chain
 from langchain_core.output_parsers import JsonOutputParser
+from langchain.chains.summarize import load_summarize_chain
 
 # Set up OpenAI API key
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
