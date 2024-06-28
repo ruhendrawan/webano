@@ -3,7 +3,8 @@
 echo "Installing venv"
 echo "Press enter to continue" && read
 pip3 install --upgrade pip
-sudo apt install python3-venv
+brew install python3-venv
+# or sudo apt-get install python3-venv  
 python3 -m venv .venv
 
 echo "Using venv"
